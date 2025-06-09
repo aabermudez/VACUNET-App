@@ -1,69 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Información del proyecto -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú</title>
-    <link rel="stylesheet" href="Style_menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Menú VACUNET APP" />
+    <title>Menú VACUNET APP</title>
+    <meta name="keywords" content="Vista de VACUNET SAS">
+    <meta name="author" content="Andrés Agudelo Bermúdez"/>
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Conexión con estilos generales de proyecto -->
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <!-- Conexión de Favicon-->
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+
+    <!-- Estilos únicos de la vista-->
+
+    <!-- Estilos dependientes de características -->
+
+
+    <!-- Consumo de fuentes a través de conexiones externas-->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
+    <!-- Lógica de interactividad mínima del proyecto -->
+    <script src="/js/scriptMenuSlide.js"></script>
+
+    <!-- Lógica única de la vista -->
+
 </head>
-<body>
-           
-    <div class="ventana_menu">
+
+<body>    
         
-        <header class="encabezado"> 
-            
-            <div class="iconos__cabecera">
-                <div class="retroceso">
-                    <span id="back" class="material-symbols-outlined">arrow_back</span>
-                    <span>atrás</span>
+    <header class="encabezado">
+        <div class="iconos_cabecera">
+            <a href="" class="retroceso">
+                <span id="backSymbol" class="material-symbols-outlined">arrow_back</span>
+                <span id="backMessaage">Atrás</span>
+            </a>
+            <nav class="topnav" aria-label="Menú superior de navegación global">
+            <!-- El botón de despliegue del menú -->
+                <button class="topSideBar" aria-label="Botón dedespliegue del Menú">
+                    <span>Desplegar menú</span>
+                    <span class="bars">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                    </span>
+                </button>
+            </nav>
+        </div>
+    </header> 
+
+    <main>
+        <div class="menu_desplegable">
+        <h1 class="titulo_de_opcion">Menu principal</h1>
+            <div class="ventana_menu">
+                <a class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Calendario.png" alt="">
+                    <h2>Agendar citas</h2>
+                    <p>Programar citas de pacientes por fechas</p>
+                </a>  
+
+                <div class="box_menu">
+                    <a href="">
+                        <img class="imagen_menu" src="/assets/img/resources/Certificado.png" alt="">
+                        <h2>certificados</h2>
+                        <p>Generación de certificados para pacientes</p>
+                    </a>
                 </div>
-                <span id="cancel_icon" class="material-symbols-outlined">cancel</span>
+
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Reloj.png" alt="">
+                    <h2>Ver citas</h2>
+                    <p>Listado de citas programadas por fecha</p>
+                </div>
+
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Usuario.png" alt="">
+                    <h2>Perfil paciente</h2>
+                    <p>Información registrada de cada paciente</p>
+                </div>
+
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Vacuna.png" alt="">
+                    <h2>Ingresar paciente</h2>
+                    <p>Registro, actualización y eliminación de pacientes</p>
+                </div>
+
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Informe.png" alt="">
+                    <h2>Informes</h2>
+                    <p>Generación de informes para procesos administrativos</p>            
+                </div>
             </div>
-        
-            <h1>Menu principal</h1>
-            
-        </header> 
-        
-        <div class="box_menu">
-            <img class="imagen_menu" src="IMAGENES/Calendario.png" alt="">
-            <h2>Agendar citas</h2>
-            <p>Programar citas de pacientes por fechas</p>
-        </div>  
-
-        <div class="box_menu">
-            <img class="imagen_menu" src="IMAGENES/Certificado.png" alt="">
-            <h2>certificados</h2>
-            <p>Generación de certificados para pacientes</p>
         </div>
-
-        <div class="box_menu">
-            <img class="imagen_menu" src="IMAGENES/Reloj.png" alt="">
-            <h2>Ver citas</h2>
-            <p>Listado de citas programadas por fecha</p>
-        </div>
-
-        <div class="box_menu">
-            <img class="imagen_menu" src="IMAGENES/Usuario.png" alt="">
-            <h2>Perfil paciente</h2>
-            <p>Información registrada de cada paciente</p>
-        </div>
-
-        <div class="box_menu">
-            <img class="imagen_menu" src="IMAGENES/Vacuna.png" alt="">
-            <h2>Ingresar paciente</h2>
-            <p>Registro, actualización y eliminación de pacientes</p>
-        </div>
-
-        <div class="box_menu">
-            <img class="imagen_menu" src="IMAGENES/Informe.png" alt="">
-            <h2>Informes</h2>
-            <p>Generación de informes para procesos administrativos</p>
+        <div class="contenido_regular">
+            <p>llenar</p>
         </div> 
-            
-        
-    </div>
+    </main>
+
+    <footer class="site-footer">
+    <p>VACUNET APP ®. Todos los derechos reservados.</p>
+    <p>Por CYBERSENATOR / SENA-ADSO 2897548 para VACUNET SAS.</p>
+    </footer>
+
 </body>
+
 </html>

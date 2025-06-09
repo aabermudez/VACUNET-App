@@ -1,0 +1,194 @@
+/* Del body (generalidad) */
+body {
+  background-color: #f7f9f9;
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Del encabezado */
+
+.encabezado {
+  width: 100%;
+  height: 10vh;
+}
+
+.iconos_cabecera {
+  background-color: #C71585;
+  border-bottom: 1px solid #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconos_cabecera span, a {
+  color:white;
+  font-size: 1.1rem;
+}
+
+.retroceso {
+  text-shadow: 1px 1px 2px gray;
+  gap: 1rem;
+}
+
+.retroceso {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+/*creando las bars*/
+.topSideBar {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px; /* Para que se separen el bars del span */
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.bar {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 6px;
+  transition: 0.4s;
+  }
+
+.topSideBar:hover .bar {
+  background-color:#404040;
+  transition: 0.4s;
+  }
+
+/* Transformaciones del ícono de menú */
+.toggleSideBarClass .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+  }
+.toggleSideBarClass .bar2 {
+      opacity: 0;
+  }
+.toggleSideBarClass .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+  }
+
+/*Menú a despegar*/
+.menu_desplegable {
+  background-color: white;
+  position: fixed;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  transform: translateX(-100%); /* 👈 Asegúrate de que esté activa */
+  transition: transform 0.3s ease-in-out;
+   z-index: 9999; /* 👈 esto lo hace flotar encima */
+}
+
+.menu_desplegable.toggleSideOk {
+  position: fixed;
+  transform: translateX(0); /* Entra desde la izquierda */
+}
+
+/* 📱 Escalado hacia tablets o escritorio */
+@media (min-width: 768px) {
+  .ventana_menu {
+    justify-content: space-around;
+    border: 1px solid #00000014;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .box_menu {
+    margin: 1rem;
+  }
+}
+
+/*Del main*/
+
+.contenido_regular {
+  height: 80hv;
+  width: 100%;
+}
+
+.titulo_de_opcion {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2.5rem; 
+  font-weight: bold;
+  color: black;
+  padding: 0.5rem;
+  text-shadow: 1px 1px 2px #bbb, 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*Las tarjetas vínculo*/
+
+.ventana_menu {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+  min-height: 80vh;
+  justify-content: center;
+  text-align: center;
+  column-gap: 1.25rem; /* 20px */
+  padding: 1rem;
+}
+
+.box_menu {
+  width: 100%;
+  max-width: 200px;
+  height: 22.5rem; /* 360px */
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-shadow: 4px 4px 3px #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  margin: 1rem 0;
+}
+
+.box_menu h2 {
+  font-size: 1.5rem; /* 30px */
+  color: #3498db;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.imagen_menu {
+  width: 100px;
+  height: 100px;
+}
+
+.box_menu p {
+  color: #808080;
+  font-weight: bold;
+  font-size: 1rem; /* 18px aprox */
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.box_menu:hover {
+  box-shadow: 5px 5px 10px gray;
+}
+
+/*Del footer*/
+
+.site-footer {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #C71585;
+  color: white;
+  border-top: 1px solid #000000;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-footer p{
+  padding: 1vh 1vw;
+}
