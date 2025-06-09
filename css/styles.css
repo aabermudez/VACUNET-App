@@ -9,12 +9,12 @@ a {
 }
 
 /* Del encabezado */
-
+/* Contenedor principal */
 .encabezado {
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
 }
-
+/* Contenedor secundario*/
 .iconos_cabecera {
   background-color: #C71585;
   border-bottom: 1px solid #000000;
@@ -23,23 +23,22 @@ a {
   align-items: center;
 }
 
+/* organización de íconos */
 .iconos_cabecera span, a {
   color:white;
   font-size: 1.1rem;
-}
-
-.retroceso {
   text-shadow: 1px 1px 2px gray;
   gap: 1rem;
-}
-
-.retroceso {
-  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
   align-items: center;
-  margin: 1rem;
 }
 
-/*creando las bars*/
+.iconos_cabecera .material-symbols-outlined{
+  font-size: 1.5rem;
+}
+
+/*creando el botón de menú*/
 .topSideBar {
   background-color: transparent;
   border: none;
@@ -51,6 +50,7 @@ a {
   padding-bottom: 7px;
 }
 
+/*creando las bars*/
 .bar {
   width: 35px;
   height: 5px;
@@ -79,7 +79,7 @@ a {
 .menu_desplegable {
   background-color: white;
   position: fixed;
-  top: 5%;
+  top: 10%;
   left: 0;
   width: 100%;
   transform: translateX(-100%); /* 👈 Asegúrate de que esté activa */
@@ -92,25 +92,120 @@ a {
   transform: translateX(0); /* Entra desde la izquierda */
 }
 
-/* 📱 Escalado hacia tablets o escritorio */
-@media (min-width: 768px) {
-  .ventana_menu {
-    justify-content: space-around;
-    border: 1px solid #00000014;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .box_menu {
-    margin: 1rem;
-  }
-}
-
 /*Del main*/
 
 .contenido_regular {
-  height: 80hv;
+  min-height: 80hv;
   width: 100%;
+}
+
+.contenido_regular button {
+  padding: 1rem;
+  left: 1 rem;
+  background-color: white;
+  border-radius: 30%;
+}
+
+.caja_principal {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  background-color: #D9D9D9;
+  height: 60%;
+  width: 96%;
+  border-color: #404040;
+  border-radius: 5%;
+}
+
+.caja_secundaria {
+  display: flex;
+  flex-direction: row;
+}
+
+/*Caja_de_cita*/
+
+
+.caja_cita{
+    border: 1px solid #000;
+    height: 545px;
+    width: 550px;
+    border-radius: 87px;
+    opacity: 100%;
+    font-family: inter;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 2%;  
+}
+
+.contenido_cita{
+    width: 25%;
+}
+
+.icono_cita{
+    position: relative;
+    top: 2%;
+    left: 2%;
+    display: flex;  
+    flex-direction: column;
+    align-items: center; 
+}
+
+.icono_cita .material-symbols-outlined {
+    font-size: 50px;
+    width: 48px;
+    height: 48px;
+    color: #000;
+    margin: 15px auto;
+}
+
+
+/*NUMERALES*/
+.paginacion a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: inter;
+    width: 2%;
+    height: 2%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 15px 13px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0 3px 3px #ccc;
+    left: 10px;
+}
+
+.paginacion a:active{
+    color: skyblue;
+}
+
+.active{
+    background-color: #ccc;
+}
+
+/*Títulos*/
+.encabezado_estatico h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0%;
+    font-family: inter;
+}
+
+.encabezado_dinamico h1{
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0%;
+    font-family: caveat;
 }
 
 .titulo_de_opcion {
@@ -129,26 +224,28 @@ a {
   margin: 0 auto;
   width: 100%;
   max-width: 1500px;
-  min-height: 80vh;
-  justify-content: center;
+  min-height: 60vh;
   text-align: center;
-  column-gap: 1.25rem; /* 20px */
-  padding: 1rem;
+  justify-content: space-around;
+  border: 1px solid #00000014;
+  padding: 0.5rem;  
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .box_menu {
   width: 100%;
-  max-width: 200px;
-  height: 22.5rem; /* 360px */
+  max-width: 10%;
+  height: 50%; /* 360px */
   border: 1px solid #ccc;
-  border-radius: 30px;
+  border-radius: 10%;
   box-shadow: 4px 4px 3px #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: white;
-  margin: 1rem 0;
+  margin: 1%;
 }
 
 .box_menu h2 {

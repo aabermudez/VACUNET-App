@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Menú VACUNET APP" />
-    <title>Menú VACUNET APP</title>
+    <title>Menú principal VACUNET APP</title>
     <meta name="keywords" content="Vista de VACUNET SAS">
     <meta name="author" content="Andrés Agudelo Bermúdez"/>
     <meta name="robots" content="index, follow">
@@ -25,6 +25,8 @@
     <!-- Consumo de fuentes a través de conexiones externas-->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- Lógica de interactividad mínima del proyecto -->
     <script src="/js/scriptMenuSlide.js"></script>
@@ -41,6 +43,12 @@
                 <span id="backSymbol" class="material-symbols-outlined">arrow_back</span>
                 <span id="backMessaage">Atrás</span>
             </a>
+
+            <a href="">
+                <span id="profilenMessage">Perfil del administrador </span>
+                <span id="profileSession" class="material-symbols-outlined">person</span>
+            </a>
+
             <nav class="topnav" aria-label="Menú superior de navegación global">
             <!-- El botón de despliegue del menú -->
                 <button class="topSideBar" aria-label="Botón dedespliegue del Menú">
@@ -57,7 +65,9 @@
 
     <main>
         <div class="menu_desplegable">
-        <h1 class="titulo_de_opcion">Menu principal</h1>
+            <div class="encabezado_estatico">
+                <h1>Menu principal</h1>
+            </div>
             <div class="ventana_menu">
                 <a class="box_menu">
                     <img class="imagen_menu" src="/assets/img/resources/Calendario.png" alt="">
@@ -96,11 +106,67 @@
                     <h2>Informes</h2>
                     <p>Generación de informes para procesos administrativos</p>            
                 </div>
+
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Cerrar.png" alt="">
+                    <h2>Cerrar sesión</h2>
+                    <p>Volver al menú de autenticación</p>            
+                </div>
             </div>
         </div>
         <div class="contenido_regular">
-            <p>llenar</p>
-        </div> 
+            <div class="encabezado_dinamico">
+                <h1>¡Hola! Explora tu agenda.</h1>
+            </div>
+            <div class="caja_principal">
+                <button>
+                    <a href="">
+                       Ver todas las citas
+                    </a>
+                </button>
+                <div class="caja_secundaria">
+                    <div class="contenido_cita">
+                        <p>Cita: <span>000236</span></p>
+                        <p>Fecha: <span>03/03/2025</span></p>
+                        <p>Hora: <span>1:30 pm</span></p>
+                        <p>Vacuna: <span>Covid 19</span></p> 
+                        <p>Dosis: <span>1</span></p>
+                        <p>Fabricante: <span>Novavax</span></p>
+                        <p>Nombre: <span>Jack</span></p>
+                        <p>Apellido: <span>Sparrow</span></p>
+                        <p>ID: <span>73836927</span></p> 
+                        <!--aplicar función JS en el span-->
+                        <div class="icono_cita">
+                        <a href=""><span class="material-symbols-outlined">build</span></a>
+                        <a href=""><span class="material-symbols-outlined">delete</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="caja_secundaria">
+                    <div class="contenido_cita">
+                        <p>Cita: <span>000236</span></p>
+                        <p>Fecha: <span>03/03/2025</span></p>
+                        <p>Hora: <span>1:30 pm</span></p>
+                        <p>Vacuna: <span>Covid 19</span></p> 
+                        <p>Dosis: <span>1</span></p>
+                        <p>Fabricante: <span>Novavax</span></p>
+                        <p>Nombre: <span>Jack</span></p>
+                        <p>Apellido: <span>Sparrow</span></p>
+                        <p>ID: <span>73836927</span></p> 
+                        <!--aplicar función JS en el span-->
+                        <div class="icono_cita">
+                        <a href=""><span class="material-symbols-outlined">build</span></a>
+                        <a href=""><span class="material-symbols-outlined">delete</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="paginacion">
+                <a href="" class="active">1</a>
+                <a href="">2</a>
+                <a href="">3</a>                    
+                <a href="">4</a>        
+            </div>
     </main>
 
     <footer class="site-footer">
