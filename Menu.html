@@ -132,6 +132,63 @@
         </div>
         <!-- Termina menú desplegable -->
 
+        <!-- Desplegble tras oprimir el botón de menu (Hay que convertirlo en un componente) -->
+        <div class="menu_administrador"> <!-- Tiene position fixed, virtualmente no ocupa espacio, se monta sobre pantalla -->
+            <!-- Título del menú -->
+            <div class="encabezado_estatico">
+                <h1>Modifique sus datos</h1>
+            </div>
+            <!-- Tarjetas del menú -->
+            <div class="ventana_menu">
+                <!-- hacia el calendario -->
+                <a class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Calendario.png" alt="">
+                    <h2>Agendar citas</h2>
+                    <p>Programar citas de pacientes por fechas</p>
+                </a>  
+                <!-- hacia el certificado -->
+                <div class="box_menu">
+                    <a href="">
+                        <img class="imagen_menu" src="/assets/img/resources/Certificado.png" alt="">
+                        <h2>certificados</h2>
+                        <p>Generación de certificados para pacientes</p>
+                    </a>
+                </div>
+                <!-- hacia el reloj -->
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Reloj.png" alt="">
+                    <h2>Ver citas</h2>
+                    <p>Listado de citas programadas por fecha</p>
+                </div>
+                <!-- hacia el usuario -->
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Usuario.png" alt="">
+                    <h2>Perfil paciente</h2>
+                    <p>Información registrada de cada paciente</p>
+                </div>
+                <!-- hacia vacunas -->
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Vacuna.png" alt="">
+                    <h2>Ingresar paciente</h2>
+                    <p>Registro, actualización y eliminación de pacientes</p>
+                </div>
+                <!-- hacia el informe -->
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Informe.png" alt="">
+                    <h2>Informes</h2>
+                    <p>Generación de informes para procesos administrativos</p>            
+                </div>
+                <!-- hacia cerrar sesión -->
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Cerrar.png" alt="">
+                    <h2>Cerrar sesión</h2>
+                    <p>Volver al menú de autenticación</p>            
+                </div>
+            </div>
+            <!-- Termina tarjetero -->
+        </div>
+        <!-- Termina menú desplegable -->
+
         <!-- Inicia contenido principal de vista -->
         <div class="contenido_regular">
 
@@ -289,21 +346,16 @@
                 <!-- Botón para ir a ver el completo de citas -->
                 <a href="" class="regularLink">Agendar</a>
                 <!-- números de página -->
-                <div>
-                   <a href="" class="active">1</a>
-                   <a href="">2</a>
-                   <a href="">3</a>                    
-                   <a href="">4</a>
+                <div class="pageNumbers">
+                   <button class="active">1</button>
+                   <button>2</button>
+                   <button>3</button>                    
+                   <button>4</button>
                 </div>       
                 <!-- Botón para ir a ver el completo de citas -->
-        m       <a href="" class="regularLink">Certificar</a> 
+                <a href="" class="regularLink">Certificar</a> 
             </div>
             <!-- Termina paginación paginación -->
-        </div>
-        <div class="parallelOptions">
-        <!-- Cierre de caja donde se muestran las tarjetas de las citas más inmediatas-->
-        
-        
         </div>
     </main>
     <!-- Finaliza el contenido principal -->

@@ -2,9 +2,11 @@
 Generalidad
 ============== */
 
+/* == Anotación: Los menús desplegables se hallan al final del CSS == */
+
 /*Se usa para establecer */
 html {
-
+  font-size: 16px;
 }
 
 body {
@@ -37,7 +39,6 @@ a {
 .topNavBar span, a {
   color:white;
   font-size: 1.1rem;
-  text-shadow: 1px 1px 2px gray;
   gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -99,38 +100,48 @@ a {
       transform: translate(0, -11px) rotate(45deg);
   }
 
-/*Menú de navegación de funcionalidades */
-.menu_desplegable {
-  background-color: white;
-  position: fixed;
-  top: 10%;
-  left: 0;
-  width: 100%;
-  transform: translateX(+100%); /* Para que se guarde la derecha */
-  transition: transform 0.3s ease-in-out;
-   z-index: 9999; /* Para que flote encima */
-}
-
-.menu_desplegable.toggleSideOk {
-  position: fixed;
-  transform: translateX(0); /* Entra desde la derechaa */
-}
-
 /* ============
  Del main
 ============== */
 
-/* Se fija su tamaño para que desarrolle una barra de navegación que nunca esconda el header ni el footer */
-.contenido_regular {
-  width: 100%;
+/*Estilos prticulares de títulos*/
+.encabezado_estatico h1{ /* Título m´s */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    font-family: inter;
+}
+
+.encabezado_dinamico h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0%;
+    font-family: caveat;
 }
 
 /* Personalización de link según maquetación (Convertir en componente) */
 .regularLink {
   display: inline-block;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
   background-color: white;
   margin: 1rem;
+  color:#000000;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.regularLink:hover {
+  color: white;
+  background-color: #C71585;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transform: scale(1.02);
 }
 
 /* Caja que enmarca la caja secundaria que contiene las tarjetas */
@@ -143,19 +154,22 @@ a {
 }
 
 /* Caja secundaria que contiene las tarjetas */
-    /* Controla el display de las mismas, además de la barra de desplazamiento */
 .caja_secundaria {
   background-color: white;
   margin-left: 1%;
   margin-right: 1%;
   margin-bottom: 1%;
+
+  /* Comportamiento de lo contenido */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
   /* Se limita el alto para que se pueda desarrollar el scroll */
-  height: 17rem;
+  height: 15rem;
   overflow-y: scroll;
+  gap: 1rem; /* espacio entre las tarjetas */
+  padding: 1rem; /* para que no se peguen los bordes */
 
   /* Se modifican las letras */
   font-size: 0.8rem;
@@ -177,14 +191,19 @@ a {
 
 /* Contenedor de citas */
 .contenido_cita{
-    width: 20rem;
+    box-sizing: border-box; /* Importnte praa que no se redimensione*/
+    width: 15rem;
+    padding: 1rem; /* opcional */
+    background-color: #f0f0f0; /* solo para visualizar */
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Íconos que deben fijarse de manera relativa a la tarjeta */
 .icono_cita{
     position: relative;
-    top: -16rem;
-    left: 0rem;
+    top: -16.5rem;
+    left: 5rem;
     display: flex;  
     flex-direction: column;
     align-items: center;
@@ -193,118 +212,53 @@ a {
 
 /* Personalización de los íconos */
 .icono_cita .material-symbols-outlined {
-    font-size: 2rem;
-    color: #555555;;
+    font-size: 1.5rem;
+    color: #000000;;
 }
 
-/* Numerales en general */
+/* Elementos bajo las tarjetas */
 .paginacion {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
-}
-
-/* Numerales por individual */
-.paginacion a {
-    color: #000;
-    font-weight: bold;
-    font-size: 1rem;
-    font-family: inter;
-    border: 1px solid #000;
-    border-radius: 50%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 3px 3px #ccc;
-    height:2rem;
-}
-
-.active {
-    background-color: #ccc;
-}
-
-/*Estilos prticulares de títulos*/
-.encabezado_estatico h1{ /* Título m´s */
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #000;
-    font-family: inter;
-}
-
-.encabezado_dinamico h1{
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #000;
-    letter-spacing: 0%;
-    font-family: caveat;
-}
-
-/*Las tarjetas vínculo*/
-.ventana_menu {
-  background-color: white;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1500px;
-  min-height: 60vh;
-  text-align: center;
-  justify-content: space-around;
-  border: 1px solid #00000014;
-  padding: 0.5rem;  
-  display: flex;
-}
-
-.box_menu {
-  width: 100%;
-  max-width: 10%;
-  flex-wrap: wrap;
-  height: 50%; /* 360px */
-  border: 1px solid #ccc;
-  border-radius: 10%;
-  box-shadow: 4px 4px 3px #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: white;
-  margin: 1%;
-}
-
-.box_menu h2 {
-  font-size: 1.5rem; /* 30px */
-  color: #3498db;
-  padding: 0.5rem;
-  margin: 0;
-}
-
-.imagen_menu {
-  width: 100px;
-  height: 100px;
-}
-
-.box_menu p {
-  color: #808080;
-  font-weight: bold;
-  font-size: 1rem; /* 18px aprox */
-  padding: 0.5rem;
-  margin: 0;
-}
-
-.box_menu:hover {
-  box-shadow: 5px 5px 10px gray;
-}
-
-.parallelOptions {
-  display: flex;
   justify-content: space-between; /* Espaciado uniforme de ítems*/
-  align-items: center;
-  gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-/*Del footer*/
+/* Botones de paginación centrales */
+.pageNumbers button {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 0.3rem;
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 50%;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
 
+.pageNumbers button:hover {
+  background-color: #C71585;
+  color: white;
+}
+
+.pageNumbers .active {
+  background-color: #ccc;
+  color: black;
+}
+
+
+/* ============
+ Footer
+============== */
+
+/* Contenedor del footer */
 .site-footer {
   height: 10vh;
   display: flex;
@@ -314,9 +268,120 @@ a {
   border-top: 1px solid #000000;
   align-items: center;
   justify-content: space-between;
+}
+
+/* Textos del footer */
+.site-footer p{
+  padding: 1vh 1vw;
+}
+
+/* ============
+ Del menú desplegable de navegación global
+============== */
+
+/*Menú de navegación de funcionalidades */
+.menu_desplegable {
+  background-color: white;
+  z-index: 9999; /* Para que flote encima */
+  overflow-y: auto;
+  
+  position: fixed;
+  top: 10%;
+  left: 0;
+  
+  width: 100%;
+  height: 76vh;
+
+  transform: translateX(+100%); /* Para que se guarde la derecha */
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu_desplegable.toggleSideOk {
+  transform: translateX(0); /* Entra desde la derechaa */
+}
+
+/* Organización interna del desplegado */
+.ventana_menu {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+
+  /* Organización interna */
+  text-align: center;
+  justify-content: space-around;
   align-items: center;
 }
 
-.site-footer p{
-  padding: 1vh 1vw;
+/* Contenedor de cada tarjeta individual del desplegable de navegación global */
+.box_menu {
+  width: 160px;
+  height: 270px;
+
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+}
+
+.box_menu:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Título h2 dentro de cada tarjeta individual del desplegable de navegación global */
+.box_menu h2 {
+  font-size: 1.5rem;
+  color: #C71585;
+  margin: 0.5rem 0 0.25rem 0;
+}
+
+/* Imágen dentro de cada tarjeta individual del desplegable de navegación global */
+.imagen_menu {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Textos dentro de cada tarjeta individual del desplegable de navegación global */
+.box_menu p {
+  color: #808080;
+  font-weight: bold;
+  font-size: 1rem; /* 18px aprox */
+  padding: 0.5rem;
+}
+
+/* ============
+ Del menú desplegable de administrador
+============== */
+
+/*Menú de navegación de funcionalidades */
+.menu_administrador {
+  background-color: white;
+  z-index: 9999; /* Para que flote encima */
+  overflow-y: auto;
+  
+  position: fixed;
+  top: 10%;
+  left: 0;
+  
+  width: 100%;
+  height: 76vh;
+
+  transform: translateX(-100%); /* Para que se guarde la derecha */
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu_desplegable.toggleSideOk {
+  transform: translateX(0); /* Entra desde la derechaa */
 }
