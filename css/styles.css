@@ -1,30 +1,40 @@
-/* Del body (generalidad) */
+/* ============
+Generalidad
+============== */
+
+/*Se usa para establecer */
+html {
+
+}
+
 body {
-  background-color: #f7f9f9;
-  font-family: 'Inter', sans-serif;
+  background-color: #f7f9f9;  /* Fondo de la generalidad */
+  font-family: 'Inter', sans-serif; /* Fuentes de la generalidad */
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none; /* Links sin decorado */
 }
 
-/* Del encabezado */
-/* Contenedor principal */
-.encabezado {
+/* ============
+ Del encabezado
+============== */
+
+.topBar {   /* Apunta al header */
   width: 100%;
   min-height: 10vh;
 }
-/* Contenedor secundario*/
-.iconos_cabecera {
+
+.topNavBar {  /* Contenedor interno del header */
   background-color: #C71585;
   border-bottom: 1px solid #000000;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Espaciado uniforme de ítems*/
   align-items: center;
 }
 
-/* organización de íconos */
-.iconos_cabecera span, a {
+/* Organización de íconos y links dentro de la barra superior de navegación */
+.topNavBar span, a {
   color:white;
   font-size: 1.1rem;
   text-shadow: 1px 1px 2px gray;
@@ -34,15 +44,22 @@ a {
   align-items: center;
 }
 
-.iconos_cabecera .material-symbols-outlined{
+/* Modificación de íconos de la barra superior de navegación (no del botón de navegación) */
+.topNavBar .material-symbols-outlined{
   font-size: 1.5rem;
 }
 
-/*creando el botón de menú*/
+/* Se añade interactividad a los links */
+.topNavBar a:hover span {
+  color:#000000;
+  transition: 0.4s;
+  }
+
+/* Referencia al botón de menú en la parte superior izquierda de la barra superior de navegación */
 .topSideBar {
-  background-color: transparent;
-  border: none;
-  display: flex;
+  background-color: transparent; 
+  border: none;    /* Se quita apariencia de botón */
+  display: flex;    /* Se hace flex para que conviva bien el span con las barras */
   flex-direction: row;
   align-items: center;
   gap: 10px; /* Para que se separen el bars del span */
@@ -50,7 +67,7 @@ a {
   padding-bottom: 7px;
 }
 
-/*creando las bars*/
+/* Se crean las barras del menú de navegación de funcionalidades */
 .bar {
   width: 35px;
   height: 5px;
@@ -59,12 +76,19 @@ a {
   transition: 0.4s;
   }
 
+/* Se añade interactividad a las barras */
 .topSideBar:hover .bar {
-  background-color:#404040;
+  background-color:#000000;
   transition: 0.4s;
   }
 
-/* Transformaciones del ícono de menú */
+/* Se añade interactividad a las barras */
+.topSideBar:hover span {
+  color:#000000;
+  transition: 0.4s;
+  }
+
+/* Transformaciones del ícono de menú de navegación de funcionalidades */
 .toggleSideBarClass .bar1 {
       transform: translate(0, 11px) rotate(-45deg);
   }
@@ -75,152 +99,152 @@ a {
       transform: translate(0, -11px) rotate(45deg);
   }
 
-/*Menú a despegar*/
+/*Menú de navegación de funcionalidades */
 .menu_desplegable {
   background-color: white;
   position: fixed;
   top: 10%;
   left: 0;
   width: 100%;
-  transform: translateX(-100%); /* 👈 Asegúrate de que esté activa */
+  transform: translateX(+100%); /* Para que se guarde la derecha */
   transition: transform 0.3s ease-in-out;
-   z-index: 9999; /* 👈 esto lo hace flotar encima */
+   z-index: 9999; /* Para que flote encima */
 }
 
 .menu_desplegable.toggleSideOk {
   position: fixed;
-  transform: translateX(0); /* Entra desde la izquierda */
+  transform: translateX(0); /* Entra desde la derechaa */
 }
 
-/*Del main*/
+/* ============
+ Del main
+============== */
 
+/* Se fija su tamaño para que desarrolle una barra de navegación que nunca esconda el header ni el footer */
 .contenido_regular {
-  min-height: 80hv;
   width: 100%;
 }
 
-.contenido_regular button {
-  padding: 1rem;
-  left: 1 rem;
+/* Personalización de link según maquetación (Convertir en componente) */
+.regularLink {
+  display: inline-block;
+  padding: 0.5rem;
   background-color: white;
-  border-radius: 30%;
+  margin: 1rem;
 }
 
+/* Caja que enmarca la caja secundaria que contiene las tarjetas */
 .caja_principal {
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-bottom: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
   background-color: #D9D9D9;
-  height: 60%;
-  width: 96%;
+  width: 98%;
   border-color: #404040;
-  border-radius: 5%;
 }
 
+/* Caja secundaria que contiene las tarjetas */
+    /* Controla el display de las mismas, además de la barra de desplazamiento */
 .caja_secundaria {
+  background-color: white;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 1%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+
+  /* Se limita el alto para que se pueda desarrollar el scroll */
+  height: 17rem;
+  overflow-y: scroll;
+
+  /* Se modifican las letras */
+  font-size: 0.8rem;
+  font-family: inter;
+  font-weight: light;
+  color: #000;
 }
 
-/*Caja_de_cita*/
-
-
-.caja_cita{
-    border: 1px solid #000;
-    height: 545px;
-    width: 550px;
-    border-radius: 87px;
-    opacity: 100%;
-    font-family: inter;
-    font-weight: bold;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    padding: 2%;  
+  /* Modificamos el scrollbar */
+.caja_secundaria::-webkit-scrollbar{
+    width: 0.6rem;
+    background-color: #cacaca;
 }
 
+  /* Modificamos la barra del scrollbar */
+.caja_secundaria::-webkit-scrollbar-thumb {
+	background-color: black; 
+}
+
+/* Contenedor de citas */
 .contenido_cita{
-    width: 25%;
+    width: 20rem;
 }
 
+/* Íconos que deben fijarse de manera relativa a la tarjeta */
 .icono_cita{
     position: relative;
-    top: 2%;
-    left: 2%;
+    top: -16rem;
+    left: 0rem;
     display: flex;  
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+    gap: 0.5rem;
 }
 
+/* Personalización de los íconos */
 .icono_cita .material-symbols-outlined {
-    font-size: 50px;
-    width: 48px;
-    height: 48px;
-    color: #000;
-    margin: 15px auto;
+    font-size: 2rem;
+    color: #555555;;
 }
 
+/* Numerales en general */
+.paginacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
 
-/*NUMERALES*/
+/* Numerales por individual */
 .paginacion a {
-    display: inline-block;
-    text-decoration: none;
     color: #000;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1rem;
     font-family: inter;
-    width: 2%;
-    height: 2%;
     border: 1px solid #000;
     border-radius: 50%;
-    padding: 15px 13px;
     text-align: center;
-    margin: 10px;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 3px 3px #ccc;
-    left: 10px;
+    height:2rem;
 }
 
-.paginacion a:active{
-    color: skyblue;
-}
-
-.active{
+.active {
     background-color: #ccc;
 }
 
-/*Títulos*/
-.encabezado_estatico h1{
+/*Estilos prticulares de títulos*/
+.encabezado_estatico h1{ /* Título m´s */
     text-align: center;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: bold;
     color: #000;
-    letter-spacing: 0%;
     font-family: inter;
 }
 
 .encabezado_dinamico h1{
     text-align: center;
-    font-size: 45px;
+    font-size: 3rem;
     font-weight: bold;
     color: #000;
     letter-spacing: 0%;
     font-family: caveat;
 }
 
-.titulo_de_opcion {
-  text-align: center;
-  text-transform: capitalize;
-  font-size: 2.5rem; 
-  font-weight: bold;
-  color: black;
-  padding: 0.5rem;
-  text-shadow: 1px 1px 2px #bbb, 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
 /*Las tarjetas vínculo*/
-
 .ventana_menu {
+  background-color: white;
   margin: 0 auto;
   width: 100%;
   max-width: 1500px;
@@ -230,12 +254,12 @@ a {
   border: 1px solid #00000014;
   padding: 0.5rem;  
   display: flex;
-  flex-wrap: wrap;
 }
 
 .box_menu {
   width: 100%;
   max-width: 10%;
+  flex-wrap: wrap;
   height: 50%; /* 360px */
   border: 1px solid #ccc;
   border-radius: 10%;
@@ -270,6 +294,13 @@ a {
 
 .box_menu:hover {
   box-shadow: 5px 5px 10px gray;
+}
+
+.parallelOptions {
+  display: flex;
+  justify-content: space-between; /* Espaciado uniforme de ítems*/
+  align-items: center;
+  gap: 1rem;
 }
 
 /*Del footer*/

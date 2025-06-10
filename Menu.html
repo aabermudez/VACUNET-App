@@ -17,64 +17,79 @@
     <!-- Conexión de Favicon-->
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
 
-    <!-- Estilos únicos de la vista-->
+    <!-- Estilos únicos de la vista (Si es que aplica) -->
 
-    <!-- Estilos dependientes de características -->
+    <!-- Estilos dependientes de características (Si es que aplica) -->
 
 
-    <!-- Consumo de fuentes a través de conexiones externas-->
+    <!-- Consumo de fuentes a través de conexiones externas (Dependen de internet) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- Lógica de interactividad mínima del proyecto -->
-    <script src="/js/scriptMenuSlide.js"></script>
+    <script src="/js/scriptMenuSlide.js"></script> <!-- Controla cambio del botón de menú de navegación global y el despliegue -->
 
-    <!-- Lógica única de la vista -->
+    <!-- Lógica única de la vista (Si es que aplica) -->
 
 </head>
 
 <body>    
-        
-    <header class="encabezado">
-        <div class="iconos_cabecera">
-            <a href="" class="retroceso">
+    <!-- Se declara el header, más abajo hay main y footer para 3 secciones principales -->
+    <header class="topBar">
+        <!-- Se hace un subcontenedor -->
+        <div class="topNavBar">
+            <!-- Botón de retroceder (Volverlo Componente) -->
+            <a href="" class="comeBack">
                 <span id="backSymbol" class="material-symbols-outlined">arrow_back</span>
                 <span id="backMessaage">Atrás</span>
             </a>
 
+            <!-- Perfil del administrador -->
             <a href="">
                 <span id="profilenMessage">Perfil del administrador </span>
                 <span id="profileSession" class="material-symbols-outlined">person</span>
             </a>
 
+            <!-- Botón de menú de navegación global -->
             <nav class="topnav" aria-label="Menú superior de navegación global">
-            <!-- El botón de despliegue del menú -->
+                <!-- El botón de despliegue del menú -->
                 <button class="topSideBar" aria-label="Botón dedespliegue del Menú">
+                    <!-- Mensaje junto a las barras -->
                     <span>Desplegar menú</span>
+                    <!-- Juego de barras -->
                     <span class="bars">
                     <div class="bar bar1"></div>
                     <div class="bar bar2"></div>
                     <div class="bar bar3"></div>
                     </span>
                 </button>
+                <!-- Cierre del botón -->
             </nav>
+            <!-- Cierre del topnav global -->
         </div>
+        <!-- Cierre de -->
     </header> 
+    <!-- Cierre de header -->
 
+    <!-- Comienza main donde aparece todo el contendio principal -->
     <main>
-        <div class="menu_desplegable">
+        <!-- Desplegble tras oprimir el botón de menu (Hay que convertirlo en un componente) -->
+        <div class="menu_desplegable"> <!-- Tiene position fixed, virtualmente no ocupa espacio, se monta sobre pantalla -->
+            <!-- Título del menú -->
             <div class="encabezado_estatico">
-                <h1>Menu principal</h1>
+                <h1>Menú Principal</h1>
             </div>
+            <!-- Tarjetas del menú -->
             <div class="ventana_menu">
+                <!-- hacia el calendario -->
                 <a class="box_menu">
                     <img class="imagen_menu" src="/assets/img/resources/Calendario.png" alt="">
                     <h2>Agendar citas</h2>
                     <p>Programar citas de pacientes por fechas</p>
                 </a>  
-
+                <!-- hacia el certificado -->
                 <div class="box_menu">
                     <a href="">
                         <img class="imagen_menu" src="/assets/img/resources/Certificado.png" alt="">
@@ -82,98 +97,224 @@
                         <p>Generación de certificados para pacientes</p>
                     </a>
                 </div>
-
+                <!-- hacia el reloj -->
                 <div class="box_menu">
                     <img class="imagen_menu" src="/assets/img/resources/Reloj.png" alt="">
                     <h2>Ver citas</h2>
                     <p>Listado de citas programadas por fecha</p>
                 </div>
-
+                <!-- hacia el usuario -->
                 <div class="box_menu">
                     <img class="imagen_menu" src="/assets/img/resources/Usuario.png" alt="">
                     <h2>Perfil paciente</h2>
                     <p>Información registrada de cada paciente</p>
                 </div>
-
+                <!-- hacia vacunas -->
                 <div class="box_menu">
                     <img class="imagen_menu" src="/assets/img/resources/Vacuna.png" alt="">
                     <h2>Ingresar paciente</h2>
                     <p>Registro, actualización y eliminación de pacientes</p>
                 </div>
-
+                <!-- hacia el informe -->
                 <div class="box_menu">
                     <img class="imagen_menu" src="/assets/img/resources/Informe.png" alt="">
                     <h2>Informes</h2>
                     <p>Generación de informes para procesos administrativos</p>            
                 </div>
-
+                <!-- hacia cerrar sesión -->
                 <div class="box_menu">
                     <img class="imagen_menu" src="/assets/img/resources/Cerrar.png" alt="">
                     <h2>Cerrar sesión</h2>
                     <p>Volver al menú de autenticación</p>            
                 </div>
             </div>
+            <!-- Termina tarjetero -->
         </div>
-        <div class="contenido_regular">
-            <div class="encabezado_dinamico">
-                <h1>¡Hola! Explora tu agenda.</h1>
-            </div>
-            <div class="caja_principal">
-                <button>
-                    <a href="">
-                       Ver todas las citas
-                    </a>
-                </button>
-                <div class="caja_secundaria">
-                    <div class="contenido_cita">
-                        <p>Cita: <span>000236</span></p>
-                        <p>Fecha: <span>03/03/2025</span></p>
-                        <p>Hora: <span>1:30 pm</span></p>
-                        <p>Vacuna: <span>Covid 19</span></p> 
-                        <p>Dosis: <span>1</span></p>
-                        <p>Fabricante: <span>Novavax</span></p>
-                        <p>Nombre: <span>Jack</span></p>
-                        <p>Apellido: <span>Sparrow</span></p>
-                        <p>ID: <span>73836927</span></p> 
-                        <!--aplicar función JS en el span-->
-                        <div class="icono_cita">
-                        <a href=""><span class="material-symbols-outlined">build</span></a>
-                        <a href=""><span class="material-symbols-outlined">delete</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="caja_secundaria">
-                    <div class="contenido_cita">
-                        <p>Cita: <span>000236</span></p>
-                        <p>Fecha: <span>03/03/2025</span></p>
-                        <p>Hora: <span>1:30 pm</span></p>
-                        <p>Vacuna: <span>Covid 19</span></p> 
-                        <p>Dosis: <span>1</span></p>
-                        <p>Fabricante: <span>Novavax</span></p>
-                        <p>Nombre: <span>Jack</span></p>
-                        <p>Apellido: <span>Sparrow</span></p>
-                        <p>ID: <span>73836927</span></p> 
-                        <!--aplicar función JS en el span-->
-                        <div class="icono_cita">
-                        <a href=""><span class="material-symbols-outlined">build</span></a>
-                        <a href=""><span class="material-symbols-outlined">delete</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="paginacion">
-                <a href="" class="active">1</a>
-                <a href="">2</a>
-                <a href="">3</a>                    
-                <a href="">4</a>        
-            </div>
-    </main>
+        <!-- Termina menú desplegable -->
 
+        <!-- Inicia contenido principal de vista -->
+        <div class="contenido_regular">
+
+            <!-- Título de los estilizados -->
+            <div class="encabezado_dinamico">
+                <h1>¡Hola <span>Administrador</span>! Explora tu agenda.</h1>  <!-- Conectar usuario de base de datos -->
+            </div>
+
+            <!-- Caja donde se muestran las tarjetas de las citas más inmediatas-->
+            <div class="caja_principal">
+
+                <!-- Botón para ir a ver el completo de citas -->
+                <a href="" class="regularLink"> Ver todas las citas </a>
+
+                <!-- Segundo contenedor donde deben salir las tarjetas debe ser flex -->
+                <div class="caja_secundaria">
+                    <!-- Tarjeta que debe conectar su contenido a la base de datos (Fluirá cuando se inyecte como componente) -->
+                    <div class="contenido_cita">
+                        <p>Cita: <span>000236</span></p>
+                        <p>Fecha: <span>03/03/2025</span></p>
+                        <p>Hora: <span>1:30 pm</span></p>
+                        <p>Vacuna: <span>Covid 19</span></p> 
+                        <p>Dosis: <span>1</span></p>
+                        <p>Fabricante: <span>Novavax</span></p>
+                        <p>Nombre: <span>Jack</span></p>
+                        <p>Apellido: <span>Sparrow</span></p>
+                        <p>ID: <span>73836927</span></p> 
+                        <!-- Íconos con funcionalidades referentes a la conexión de la tarjeta con base de datos -->
+                        <!-- Su posición debe ser relativa al contenedor-->
+                        <div class="icono_cita">
+                            <!-- Modificar cita -->
+                            <a href="" class="modifyDate"><span class="material-symbols-outlined">build</span></a>
+                            <!-- Eliminar cita -->
+                            <a href="" class="eraseDate"><span class="material-symbols-outlined">delete</span></a>
+                        </div>
+                        <!-- Cierre de íconos -->
+                    </div>
+                    <!-- Cierre de tarejta -->
+
+                    <!-- Otra tarjeta que debe conectar su contenido a la base de datos (Volverla componente) -->
+                    <div class="contenido_cita">
+                        <p>Cita: <span>000236</span></p>
+                        <p>Fecha: <span>03/03/2025</span></p>
+                        <p>Hora: <span>1:30 pm</span></p>
+                        <p>Vacuna: <span>Covid 19</span></p> 
+                        <p>Dosis: <span>1</span></p>
+                        <p>Fabricante: <span>Novavax</span></p>
+                        <p>Nombre: <span>Jack</span></p>
+                        <p>Apellido: <span>Sparrow</span></p>
+                        <p>ID: <span>73836927</span></p> 
+                        <!-- Su posición debe ser relativa al contenedor-->
+                        <div class="icono_cita">
+                            <!-- Modificar cita -->
+                            <a href="" class="modifyDate"><span class="material-symbols-outlined">build</span></a>
+                            <!-- Eliminar cita -->
+                            <a href="" class="eraseDate"><span class="material-symbols-outlined">delete</span></a>
+                        </div>
+                        <!-- Cierre de íconos -->
+                    </div>
+                    <!-- Cierre de tarejta -->
+
+                    <!-- Otra tarjeta que debe conectar su contenido a la base de datos (Volverla componente) -->
+                    <div class="contenido_cita">
+                        <p>Cita: <span>000236</span></p>
+                        <p>Fecha: <span>03/03/2025</span></p>
+                        <p>Hora: <span>1:30 pm</span></p>
+                        <p>Vacuna: <span>Covid 19</span></p> 
+                        <p>Dosis: <span>1</span></p>
+                        <p>Fabricante: <span>Novavax</span></p>
+                        <p>Nombre: <span>Jack</span></p>
+                        <p>Apellido: <span>Sparrow</span></p>
+                        <p>ID: <span>73836927</span></p> 
+                        <!-- Su posición debe ser relativa al contenedor-->
+                        <div class="icono_cita">
+                            <!-- Modificar cita -->
+                            <a href="" class="modifyDate"><span class="material-symbols-outlined">build</span></a>
+                            <!-- Eliminar cita -->
+                            <a href="" class="eraseDate"><span class="material-symbols-outlined">delete</span></a>
+                        </div>
+                        <!-- Cierre de íconos -->
+                    </div>
+                    <!-- Cierre de tarejta -->
+
+                    <!-- Otra tarjeta que debe conectar su contenido a la base de datos (Volverla componente) -->
+                    <div class="contenido_cita">
+                        <p>Cita: <span>000236</span></p>
+                        <p>Fecha: <span>03/03/2025</span></p>
+                        <p>Hora: <span>1:30 pm</span></p>
+                        <p>Vacuna: <span>Covid 19</span></p> 
+                        <p>Dosis: <span>1</span></p>
+                        <p>Fabricante: <span>Novavax</span></p>
+                        <p>Nombre: <span>Jack</span></p>
+                        <p>Apellido: <span>Sparrow</span></p>
+                        <p>ID: <span>73836927</span></p> 
+                        <!-- Su posición debe ser relativa al contenedor-->
+                        <div class="icono_cita">
+                            <!-- Modificar cita -->
+                            <a href="" class="modifyDate"><span class="material-symbols-outlined">build</span></a>
+                            <!-- Eliminar cita -->
+                            <a href="" class="eraseDate"><span class="material-symbols-outlined">delete</span></a>
+                        </div>
+                        <!-- Cierre de íconos -->
+                    </div>
+                    <!-- Cierre de tarejta -->
+
+                    <!-- Otra tarjeta que debe conectar su contenido a la base de datos (Volverla componente) -->
+                    <div class="contenido_cita">
+                        <p>Cita: <span>000236</span></p>
+                        <p>Fecha: <span>03/03/2025</span></p>
+                        <p>Hora: <span>1:30 pm</span></p>
+                        <p>Vacuna: <span>Covid 19</span></p> 
+                        <p>Dosis: <span>1</span></p>
+                        <p>Fabricante: <span>Novavax</span></p>
+                        <p>Nombre: <span>Jack</span></p>
+                        <p>Apellido: <span>Sparrow</span></p>
+                        <p>ID: <span>73836927</span></p> 
+                        <!-- Su posición debe ser relativa al contenedor-->
+                        <div class="icono_cita">
+                            <!-- Modificar cita -->
+                            <a href="" class="modifyDate"><span class="material-symbols-outlined">build</span></a>
+                            <!-- Eliminar cita -->
+                            <a href="" class="eraseDate"><span class="material-symbols-outlined">delete</span></a>
+                        </div>
+                        <!-- Cierre de íconos -->
+                    </div>
+                    <!-- Cierre de tarejta -->
+                     <!-- Otra tarjeta que debe conectar su contenido a la base de datos (Volverla componente) -->
+                    <div class="contenido_cita">
+                        <p>Cita: <span>000236</span></p>
+                        <p>Fecha: <span>03/03/2025</span></p>
+                        <p>Hora: <span>1:30 pm</span></p>
+                        <p>Vacuna: <span>Covid 19</span></p> 
+                        <p>Dosis: <span>1</span></p>
+                        <p>Fabricante: <span>Novavax</span></p>
+                        <p>Nombre: <span>Jack</span></p>
+                        <p>Apellido: <span>Sparrow</span></p>
+                        <p>ID: <span>73836927</span></p> 
+                        <!-- Su posición debe ser relativa al contenedor-->
+                        <div class="icono_cita">
+                            <!-- Modificar cita -->
+                            <a href="" class="modifyDate"><span class="material-symbols-outlined">build</span></a>
+                            <!-- Eliminar cita -->
+                            <a href="" class="eraseDate"><span class="material-symbols-outlined">delete</span></a>
+                        </div>
+                        <!-- Cierre de íconos -->
+                    </div>
+                    <!-- Cierre de tarejta -->
+                </div>
+                <!-- Cierra el contenedor donde salen las tarjetas (acaba el flex) -->
+            </div>
+            <!-- Cierre de cajón principal -->
+
+            <!-- Se genera una paginación (hacerlo componente sensible al número de registros de la base de datos) -->
+            <div class="paginacion">
+                <!-- Botón para ir a ver el completo de citas -->
+                <a href="" class="regularLink">Agendar</a>
+                <!-- números de página -->
+                <div>
+                   <a href="" class="active">1</a>
+                   <a href="">2</a>
+                   <a href="">3</a>                    
+                   <a href="">4</a>
+                </div>       
+                <!-- Botón para ir a ver el completo de citas -->
+        m       <a href="" class="regularLink">Certificar</a> 
+            </div>
+            <!-- Termina paginación paginación -->
+        </div>
+        <div class="parallelOptions">
+        <!-- Cierre de caja donde se muestran las tarjetas de las citas más inmediatas-->
+        
+        
+        </div>
+    </main>
+    <!-- Finaliza el contenido principal -->
+
+    <!-- Comienza pie de página -->
     <footer class="site-footer">
-    <p>VACUNET APP ®. Todos los derechos reservados.</p>
-    <p>Por CYBERSENATOR / SENA-ADSO 2897548 para VACUNET SAS.</p>
+        <p>VACUNET APP ®. Todos los derechos reservados.</p>
+        <p>Por CYBERSENATOR / SENA-ADSO 2897548 para VACUNET SAS.</p>
     </footer>
+    <!-- Finaliza pie de página -->
 
 </body>
-
+<!-- Finalizan las tres secciones principales -->
 </html>
