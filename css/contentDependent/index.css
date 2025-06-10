@@ -1,0 +1,41 @@
+.regularInstructions {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 0.3rem;
+    height: 66vh;
+}
+
+.logoShowing {
+    width: 12rem;
+    height: 12rem;
+}
+
+.heroImage::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(190, 190, 190, 0.8); /* o usa rgba(0,0,0,0.3) si quieres oscurecer */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.heroImage {
+  position: fixed;
+  top: 9%;
+  left: 0;
+
+  margin-left: 1%;
+  margin-right: 1%;
+
+  background-size: cover;
+  background-position: center;
+  height: 78vh;
+  width: 98%;
+
+  z-index: -2;
+  transition: opacity 1s ease-in-out;
+  overflow: hidden;
+}

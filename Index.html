@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Información del proyecto -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Menú VACUNET APP" />
+    <title>Bienvenida VACUNET APP</title>
+    <meta name="keywords" content="Vista de VACUNET SAS">
+    <meta name="author" content="Andrés Agudelo Bermúdez"/>
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Conexión con estilos generales de proyecto -->
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    <!-- Conexión de Favicon-->
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+
+    <!-- Estilos únicos de la vista (Si es que aplica) -->
+     <link rel="stylesheet" href="/css/contentDependent/index.css">
+
+    <!-- Estilos dependientes de características (Si es que aplica) -->
+
+
+    <!-- Consumo de fuentes a través de conexiones externas (Dependen de internet) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Lógica de interactividad mínima del proyecto -->
+    <script src="/js/scriptMenuSlide.js"></script> <!-- Controla cambio del botón de menú de navegación global y el despliegue -->
+
+    <!-- Lógica única de la vista (Si es que aplica) -->
+    <script src="/js/scriptHeroImage.js"></script> <!-- Controla cambio del botón de menú de navegación global y el despliegue -->
+
+</head>
+
+<body>    
+    <!-- Se declara el header, más abajo hay main y footer para 3 secciones principales -->
+    <header class="topBar">
+        <!-- Se hace un subcontenedor -->
+        <div class="topNavBar">
+            <!-- Botón de retroceder (Volverlo Componente) -->
+            <a href="https://www.instagram.com/centrodevacunasvacunet/" target="_blank" rel="noopener noreferrer">
+                <span id="socialMedia">Instagram VACUNET</span>
+            </a>
+
+            <!-- Perfil del administrador -->
+            <a href="" class="vaccineOffering">
+                <span id="profilenMessage">Consulte la oferta de vacunación</span>
+            </a>
+
+            <!-- Botón de menú de navegación global -->
+            <nav class="topnav" aria-label="Menú superior de navegación global">
+                <!-- El botón de despliegue del menú -->
+                <button class="topSideBar" aria-label="Botón dedespliegue del Menú">
+                    <!-- Mensaje junto a las barras -->
+                    <span>Desplegar menú</span>
+                    <!-- Juego de barras -->
+                    <span class="bars">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                    </span>
+                </button>
+                <!-- Cierre del botón -->
+            </nav>
+            <!-- Cierre del topnav global -->
+        </div>
+    </header> 
+    <!-- Cierre de header -->
+
+    <!-- Comienza main donde aparece todo el contendio principal -->
+    <main>
+
+        <!-- Desplegble tras oprimir el botón de menu (Hay que convertirlo en un componente) -->
+        <div class="menu_desplegable"> <!-- Tiene position fixed, virtualmente no ocupa espacio, se monta sobre pantalla -->
+            <!-- Título del menú -->
+            <div class="encabezado_estatico">
+                <h1>Menú de interés</h1>
+            </div>
+            <!-- Tarjetas del menú -->
+            <div class="ventana_menu">
+                <!-- hacia el calendario -->
+                <a class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Calendario.png" alt="">
+                    <h2>Eventos</h2>
+                    <p>Conozca la actividad social de la empresa</p>
+                </a>  
+                <!-- hacia el certificado -->
+                <div class="box_menu">
+                    <a href="">
+                        <img class="imagen_menu" src="/assets/img/resources/Certificado.png" alt="">
+                        <h2>certificados</h2>
+                        <p>Conozca acerca de la validación de su proceso de vacunación</p>
+                    </a>
+                </div>
+                
+                <!-- hacia vacunas -->
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Vacuna.png" alt="">
+                    <h2>Vacunas</h2>
+                    <p>Requisitos y especificaciones de inyectología</p>
+                </div>
+                <!-- hacia el informe -->
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Informe.png" alt="">
+                    <h2>Normativa</h2>
+                    <p>Legalidad y legitimidad del proceso de vacunación</p>            
+                </div>
+            </div>
+            <!-- Termina tarjetero -->
+        </div>
+        <!-- Termina menú desplegable -->
+
+        <!-- Inicia contenido principal de vista -->
+        <div class="contenido_regular">
+
+            <div class="heroImage"></div>
+
+            <div class="encabezado_estatico">
+                <h1>Bienvenido a la APP VACUNET.</h1>  <!-- Conectar usuario de base de datos -->
+            </div>
+
+            <div class="regularInstructions">
+                <img src="/assets/img/resources/logo.png" class="logoShowing" alt="">
+                <!-- Título de los estilizados -->
+                <a class="regularLink">Ingresar como administrador</a>
+                <p>Software exclusivo para personal de la empresa</p>
+                <a class="regularLink">Contacto - Ubicaciones</a>
+            </div>
+        </div>
+    </main>
+    <!-- Finaliza el contenido principal -->
+
+    <!-- Comienza pie de página -->
+    <footer class="site-footer">
+        <p>VACUNET APP ®. Todos los derechos reservados.</p>
+        <p>Por CYBERSENATOR / SENA-ADSO 2897548 para VACUNET SAS.</p>
+    </footer>
+    <!-- Finaliza pie de página -->
+
+</body>
+<!-- Finalizan las tres secciones principales -->
+
+<!-- Íconos para tener por ahí
+ 
+<span class="material-symbols-outlined">menu</span>
+    <span class="material-symbols-outlined">arrow_back</span>
+    <span class="material-symbols-outlined">cancel</span>
+    <span class="material-symbols-outlined">download</span>
+    <span class="material-symbols-outlined">mail</span>
+    <span class="material-symbols-outlined">delete</span>
+    <span class="material-symbols-outlined">build</span>
+-->
+
+</html>
