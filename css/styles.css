@@ -57,7 +57,7 @@ a {
   }
 
 /* Referencia al botón de menú en la parte superior izquierda de la barra superior de navegación */
-.topSideBar {
+.topSideBar, .profileAdmin {
   background-color: transparent; 
   border: none;    /* Se quita apariencia de botón */
   display: flex;    /* Se hace flex para que conviva bien el span con las barras */
@@ -66,6 +66,7 @@ a {
   gap: 10px; /* Para que se separen el bars del span */
   padding-top: 7px;
   padding-bottom: 7px;
+  cursor: pointer;
 }
 
 /* Se crean las barras del menú de navegación de funcionalidades */
@@ -120,6 +121,11 @@ a {
     color: #000;
     letter-spacing: 0%;
     font-family: caveat;
+}
+
+.bannersTitle {
+  width: 6rem;
+  height: 6rem;
 }
 
 /* Personalización de link según maquetación (Convertir en componente) */
@@ -217,7 +223,7 @@ a {
 }
 
 /* Elementos bajo las tarjetas */
-.paginacion {
+.parallel {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -382,6 +388,52 @@ a {
   transition: transform 0.3s ease-in-out;
 }
 
-.menu_desplegable.toggleSideOk {
-  transform: translateX(0); /* Entra desde la derechaa */
+.menu_administrador.toggleSideAdmin {
+  transform: translateX(0);
+}
+
+.form_admin {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.form_admin label {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.form_admin input,
+.form_admin select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.boton_guardar {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.boton_guardar:hover {
+  background-color: #2980b9;
+}
+
+.cerrar_sesion {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.boton_logout {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
 }

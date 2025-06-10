@@ -9,3 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const adminbar = document.querySelector(".profileAdmin");
+  const adminmenu = document.querySelector(".menu_administrador");
+
+  if (adminbar && adminmenu) {
+    adminbar.addEventListener("click", () => {
+      adminmenu.classList.toggle("toggleSideAdmin");
+    });
+  }
+});
