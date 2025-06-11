@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Menú VACUNET APP" />
-    <title>Bienvenida VACUNET APP</title>
+    <title>Inicio de sesión VACUNET APP</title>
     <meta name="keywords" content="Vista de VACUNET SAS">
-    <meta name="author" content="Andrés Agudelo Bermúdez"/>
+    <meta name="author" content="CYBERSENATOR-SENA-ADSO-2897548"/>
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -43,13 +43,13 @@
         <!-- Se hace un subcontenedor -->
         <div class="topNavBar">
             <!-- Botón de retroceder (Volverlo Componente) -->
-            <a href="https://www.instagram.com/centrodevacunasvacunet/" target="_blank" rel="noopener noreferrer">
-                <span id="socialMedia">Instagram VACUNET</span>
+            <a href="/index.html" class="comeBack">
+                <span id="backSymbol" class="material-symbols-outlined">arrow_back</span>
+                <span id="backMessaage">Atrás</span>
             </a>
 
-            <!-- Perfil del administrador -->
-            <a href="/index.html" class="vaccineOffering">
-                <span id="profilenMessage">Volver a la bienvenida</span>
+            <a href="https://www.instagram.com/centrodevacunasvacunet/" target="_blank" rel="noopener noreferrer">
+                <span id="socialMedia">Instagram VACUNET</span>
             </a>
 
             <!-- Botón de menú de navegación global -->
@@ -57,7 +57,7 @@
                 <!-- El botón de despliegue del menú -->
                 <button class="topSideBar" aria-label="Botón dedespliegue del Menú">
                     <!-- Mensaje junto a las barras -->
-                    <span>Desplegar menú</span>
+                    <span>Menú de clientes</span>
                     <!-- Juego de barras -->
                     <span class="bars">
                     <div class="bar bar1"></div>
@@ -83,33 +83,48 @@
             </div>
             <!-- Tarjetas del menú -->
             <div class="ventana_menu">
-                <!-- hacia el calendario -->
-                <a class="box_menu">
-                    <img class="imagen_menu" src="/assets/img/resources/Calendario.png" alt="">
-                    <h2>Eventos</h2>
-                    <p>Conozca la actividad social de la empresa</p>
-                </a>  
-                <!-- hacia el certificado -->
-                <div class="box_menu">
-                    <a href="">
+                <!-- hacia eventos -->
+                <a href="/inicio/404Error.html">
+                    <div class="box_menu">
+                        <img class="imagen_menu" src="/assets/img/resources/Calendario.png" alt="">
+                        <h2>Eventos</h2>
+                        <p>Conozca la actividad social de la empresa</p>
+                    </div>
+                </a>
+                <!-- hacia información de certificados -->
+                <a href="/inicio/404ErrorVariety.html">
+                    <div class="box_menu">
                         <img class="imagen_menu" src="/assets/img/resources/Certificado.png" alt="">
-                        <h2>certificados</h2>
+                        <h2>Certificados</h2>
                         <p>Conozca acerca de la validación de su proceso de vacunación</p>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 
-                <!-- hacia vacunas -->
-                <div class="box_menu">
-                    <img class="imagen_menu" src="/assets/img/resources/Vacuna.png" alt="">
-                    <h2>Vacunas</h2>
-                    <p>Requisitos y especificaciones de inyectología</p>
-                </div>
+                <!-- hacia información de vacunas -->
+                <a href="/inicio/404ErrorVariety.html">
+                    <div class="box_menu">
+                        <img class="imagen_menu" src="/assets/img/resources/Vacuna.png" alt="">
+                        <h2>Vacunas</h2>
+                        <p>Requisitos y especificaciones de inyectología</p>
+                    </div>
+                </a>
                 <!-- hacia el informe -->
-                <div class="box_menu">
-                    <img class="imagen_menu" src="/assets/img/resources/Informe.png" alt="">
-                    <h2>Normativa</h2>
-                    <p>Legalidad y legitimidad del proceso de vacunación</p>            
-                </div>
+                <a href="/inicio/404Error.html">
+                    <div class="box_menu">
+                        <img class="imagen_menu" src="/assets/img/resources/Informe.png" alt="">
+                        <h2>Normativa</h2>
+                        <p>Legalidad y legitimidad del proceso de vacunación</p>            
+                    </div>
+                </a>
+
+                <!-- hacia contacto -->
+                <a href="/inicio/contact.html">
+                    <div class="box_menu">
+                        <img class="imagen_menu" src="/assets/img/resources/Certificado.png" alt="">
+                        <h2>Contacto</h2>
+                        <p>Escriba o llame al equipo de la organización</p>
+                    </div>
+                </a>
             </div>
             <!-- Termina tarjetero -->
         </div>
@@ -125,13 +140,21 @@
             </div>
 
             <div class="regularInstructions">
-                <span>Nombre de administrador</span>
-                <!--Insertar campo donde ingresar datos de usuario-->
-                <span>Contraseña</span>
-                <!--Insertar campo donde ingresar datos de usuario-->
-                <a class="regularLink">Ingresar como administrador</a>
-                <p>Software exclusivo para personal de la empresa</p>
-                <a class="regularLink">Contacto - Ubicaciones</a>
+                <form action="/inicio/validar.html" method="POST" class="loginForm">
+                    <label for="adminName">Nombre de usuario</label>
+                    <input type="text" id="adminName" name="adminName" placeholder="Ingrese su usuario" required>
+
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                    <span>Espacio para informar constraseña incorrecta</span>
+
+                    <button type="submit" class="regularLink">Ingresar</button>
+                </form>
+                            
+                <a href="/inicio/passwordRec.html" class="regularLink">Olvidé mi contraseña</a>
+                <p><strong>VACUNET APP</strong><br><br>
+                <span>Un desarrollo de CYBERSENATOR</span>
+                </p>
             </div>
         </div>
     </main>

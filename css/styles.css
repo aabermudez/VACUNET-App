@@ -361,7 +361,7 @@ a {
 
 /* Textos dentro de cada tarjeta individual del desplegable de navegación global */
 .box_menu p {
-  color: #808080;
+  color: #101010;
   font-weight: bold;
   font-size: 1rem; /* 18px aprox */
   padding: 0.5rem;
