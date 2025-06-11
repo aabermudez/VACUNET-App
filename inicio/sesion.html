@@ -30,10 +30,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- Lógica de interactividad mínima del proyecto -->
-    <script src="/js/scriptMenuSlide.js" defer></script> <!-- Controla cambio del botón de menú de navegación global y el despliegue -->
+    <script src="/js/scriptMenuSlide.js"></script> <!-- Controla cambio del botón de menú de navegación global y el despliegue -->
 
     <!-- Lógica única de la vista (Si es que aplica) -->
-    <script src="/js/scriptHeroImage.js" defer></script> <!-- Controla cambio del botón de menú de navegación global y el despliegue -->
+    <script src="/js/scriptHeroImage.js"></script> <!-- Controla cambio del botón de menú de navegación global y el despliegue -->
 
 </head>
 
@@ -47,9 +47,9 @@
                 <span id="socialMedia">Instagram VACUNET</span>
             </a>
 
-            <!-- link alternativo -->
-            <a href="/inicio/sesion.html" class="vaccineOffering">
-                <span id="profilenMessage">Ir al menú de autenticación</span>
+            <!-- Perfil del administrador -->
+            <a href="" class="vaccineOffering">
+                <span id="profilenMessage">Consulte la oferta de vacunación</span>
             </a>
 
             <!-- Botón de menú de navegación global -->
@@ -57,7 +57,7 @@
                 <!-- El botón de despliegue del menú -->
                 <button class="topSideBar" aria-label="Botón dedespliegue del Menú">
                     <!-- Mensaje junto a las barras -->
-                    <span>Menú de clientes</span>
+                    <span>Desplegar menú</span>
                     <!-- Juego de barras -->
                     <span class="bars">
                     <div class="bar bar1"></div>
@@ -83,48 +83,33 @@
             </div>
             <!-- Tarjetas del menú -->
             <div class="ventana_menu">
-                <!-- hacia eventos -->
-                <a href="/inicio/404Error.html">
-                    <div class="box_menu">
-                        <img class="imagen_menu" src="/assets/img/resources/Calendario.png" alt="">
-                        <h2>Eventos</h2>
-                        <p>Conozca la actividad social de la empresa</p>
-                    </div>
-                </a>
-                <!-- hacia información de certificados -->
-                <a href="/inicio/404ErrorVariety.html">
-                    <div class="box_menu">
+                <!-- hacia el calendario -->
+                <a class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Calendario.png" alt="">
+                    <h2>Eventos</h2>
+                    <p>Conozca la actividad social de la empresa</p>
+                </a>  
+                <!-- hacia el certificado -->
+                <div class="box_menu">
+                    <a href="">
                         <img class="imagen_menu" src="/assets/img/resources/Certificado.png" alt="">
-                        <h2>Certificados</h2>
+                        <h2>certificados</h2>
                         <p>Conozca acerca de la validación de su proceso de vacunación</p>
-                    </div>
-                </a>
+                    </a>
+                </div>
                 
-                <!-- hacia información de vacunas -->
-                <a href="/inicio/404ErrorVariety.html">
-                    <div class="box_menu">
-                        <img class="imagen_menu" src="/assets/img/resources/Vacuna.png" alt="">
-                        <h2>Vacunas</h2>
-                        <p>Requisitos y especificaciones de inyectología</p>
-                    </div>
-                </a>
+                <!-- hacia vacunas -->
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Vacuna.png" alt="">
+                    <h2>Vacunas</h2>
+                    <p>Requisitos y especificaciones de inyectología</p>
+                </div>
                 <!-- hacia el informe -->
-                <a href="/inicio/404Error.html">
-                    <div class="box_menu">
-                        <img class="imagen_menu" src="/assets/img/resources/Informe.png" alt="">
-                        <h2>Normativa</h2>
-                        <p>Legalidad y legitimidad del proceso de vacunación</p>            
-                    </div>
-                </a>
-
-                <!-- hacia contacto -->
-                <a href="/inicio/contact.html">
-                    <div class="box_menu">
-                        <img class="imagen_menu" src="/assets/img/resources/Certificado.png" alt="">
-                        <h2>Contacto</h2>
-                        <p>Escriba o llame al equipo de la organización</p>
-                    </div>
-                </a>
+                <div class="box_menu">
+                    <img class="imagen_menu" src="/assets/img/resources/Informe.png" alt="">
+                    <h2>Normativa</h2>
+                    <p>Legalidad y legitimidad del proceso de vacunación</p>            
+                </div>
             </div>
             <!-- Termina tarjetero -->
         </div>
@@ -142,9 +127,9 @@
             <div class="regularInstructions">
                 <img src="/assets/img/resources/logo.png" class="logoShowing" alt="">
                 <!-- Título de los estilizados -->
-                <a href="/inicio/sesion.html" class="regularLink">Ingresar como administrador</a>
+                <a class="regularLink">Ingresar como administrador</a>
                 <p>Software exclusivo para personal de la empresa</p>
-                <a href="/inicio/contact.html" class="regularLink">Contacto - Ubicaciones</a>
+                <a class="regularLink">Contacto - Ubicaciones</a>
             </div>
         </div>
     </main>
