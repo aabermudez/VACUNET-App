@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Interactividad de menús desplegables
+
+export function setupClientMenuToggle() {
   const sidebar = document.querySelector(".topSideBar");
   const sideNav = document.querySelector(".menu_desplegable");
 
@@ -8,10 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
       sideNav.classList.toggle("toggleSideOk");
     });
   }
-});
+}
 
-
-document.addEventListener("DOMContentLoaded", function () {
+export function setupAdminMenuToggle() {
   const adminbar = document.querySelector(".profileAdmin");
   const adminmenu = document.querySelector(".menu_administrador");
 
@@ -20,4 +21,4 @@ document.addEventListener("DOMContentLoaded", function () {
       adminmenu.classList.toggle("toggleSideAdmin");
     });
   }
-});
+}

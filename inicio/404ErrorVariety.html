@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- Lógica de interactividad mínima del proyecto -->
-    <script src="/js/scriptMenuSlide.js" defer></script> <!-- Controla cambio del botón de menú de navegación global y el despliegue -->
+    <script type="module" src="/js/componentLoader.js"></script>
 
     <!-- Lógica única de la vista (Si es que aplica) -->
 
@@ -56,7 +56,7 @@
                 <!-- El botón de despliegue del menú -->
                 <button class="topSideBar" aria-label="Botón dedespliegue del Menú">
                     <!-- Mensaje junto a las barras -->
-                    <span>Desplegar menú</span>
+                    <span>Menú de clientes</span>
                     <!-- Juego de barras -->
                     <span class="bars">
                     <div class="bar bar1"></div>
@@ -74,60 +74,15 @@
     <!-- Comienza main donde aparece todo el contendio principal -->
     <main>
 
-        <!-- Desplegble tras oprimir el botón de menu (Hay que convertirlo en un componente) -->
-        <div class="menu_desplegable"> <!-- Tiene position fixed, virtualmente no ocupa espacio, se monta sobre pantalla -->
-            <!-- Título del menú -->
-            <div class="encabezado_estatico">
-                <h1>Menú de interés</h1>
-            </div>
-            <!-- Tarjetas del menú -->
-            <div class="ventana_menu">
-
-                <!-- hacia información de certificados -->
-                <a href="/inicio/404ErrorVariety.html">
-                    <div class="box_menu">
-                        <img class="imagen_menu" src="/assets/img/resources/Certificado.png" alt="">
-                        <h2>Certificados</h2>
-                        <p>Conozca acerca de la validación de su proceso de vacunación</p>
-                    </div>
-                </a>
-                
-                <!-- hacia información de vacunas -->
-                <a href="/inicio/404ErrorVariety.html">
-                    <div class="box_menu">
-                        <img class="imagen_menu" src="/assets/img/resources/Vacuna.png" alt="">
-                        <h2>Vacunas</h2>
-                        <p>Requisitos y especificaciones de inyectología</p>
-                    </div>
-                </a>
-                <!-- hacia el informe -->
-                <a href="/inicio/404Error.html">
-                    <div class="box_menu">
-                        <img class="imagen_menu" src="/assets/img/resources/Informe.png" alt="">
-                        <h2>Normativa</h2>
-                        <p>Legalidad y legitimidad del proceso de vacunación</p>            
-                    </div>
-                </a>
-
-                <!-- hacia contacto -->
-                <a href="/inicio/contact.html">
-                    <div class="box_menu">
-                        <img class="imagen_menu" src="/assets/img/resources/Certificado.png" alt="">
-                        <h2>Contacto</h2>
-                        <p>Escriba o llame al equipo de la organización</p>
-                    </div>
-                </a>
-
-            </div>
-            <!-- Termina tarjetero -->
-        </div>
+        <!-- Desplegble tras oprimir el botón de menu (Optimizado para cliente) -->
+        <div id="desplegableCliente-placeholder"></div>
         <!-- Termina menú desplegable -->
 
         <!-- Inicia contenido principal de vista -->
         <div class="contenido_regular">
 
             <div class="encabezado_dinamico">
-                <h1>¡Oh!´Parece que ha ocurrido un error.</h1>  <!-- Conectar usuario de base de datos -->
+                <h1>¡Oh! Parece que ha ocurrido un error.</h1>  <!-- Conectar usuario de base de datos -->
             </div>
 
             <div class="regularStyled">
@@ -143,10 +98,7 @@
     <!-- Finaliza el contenido principal -->
 
     <!-- Comienza pie de página -->
-    <footer class="site-footer">
-        <p>VACUNET APP ®. Todos los derechos reservados.</p>
-        <p>Por CYBERSENATOR / SENA-ADSO 2897548 para VACUNET SAS.</p>
-    </footer>
+    <div id="footer-placeholder"></div>
     <!-- Finaliza pie de página -->
 
 </body>
